@@ -12,7 +12,7 @@ public class MemberController {
 
     @GetMapping("sample")
     public ResponseEntity<Member> sampleFindMember() {
-        Member member = new Member(1L, "테스트 사용자");
+        Member member = new Member("테스트 사용자", 10);
         return ResponseEntity.ok().body(member);
     }
 }

@@ -11,9 +11,15 @@ public class Member {
     @Column(name = "name")
     private String name;
 
-    public Member(Long id, String name) {
-        this.id = id;
+    @Column(name = "age")
+    private int age;
+
+    protected Member() {
+    }
+
+    public Member(String name, int age) {
         this.name = name;
+        this.age = age;
     }
 
     public Long getId() {
@@ -22,5 +28,9 @@ public class Member {
 
     public String getName() {
         return name;
+    }
+
+    public int getAge() {
+        return age;
     }
 }
