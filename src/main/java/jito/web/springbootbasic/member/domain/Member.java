@@ -1,9 +1,11 @@
-package jito.web.springbootbasic.sample.domain;
+package jito.web.springbootbasic.member.domain;
+
+import jito.web.springbootbasic.sample.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Entity
-public class Member extends BaseTimeEntity{
+public class Member extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

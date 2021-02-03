@@ -1,4 +1,4 @@
-package jito.web.springbootbasic.sample.domain;
+package jito.web.springbootbasic.member.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

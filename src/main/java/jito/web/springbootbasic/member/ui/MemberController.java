@@ -1,13 +1,13 @@
-package jito.web.springbootbasic.sample.ui;
+package jito.web.springbootbasic.member.ui;
 
-import jito.web.springbootbasic.sample.domain.Member;
+import jito.web.springbootbasic.member.domain.Member;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/member")
+@RequestMapping("/members")
 public class MemberController {
 
     @GetMapping("sample")
