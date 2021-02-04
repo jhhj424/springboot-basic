@@ -6,3 +6,6 @@ spring:
       hibernate:
         show_sql: true
         format_sql: true
+
+logging-module:
+  version: 0.0.1
