@@ -3,7 +3,7 @@ name: logging-system
 on:
   workflow_dispatch:
 
-env: # 새로 추가한 부분
+env:
   S3_BUCKET_NAME: logging-system-deploy2
   PROJECT_NAME: springboot-basic
 
