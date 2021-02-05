@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/members")
 public class MemberController {
 
-    @GetMapping("sample")
+    @GetMapping("/sample")
     public ResponseEntity<Member> sampleFindMember() {
         Member member = new Member("테스트 사용자", 10);
         return ResponseEntity.ok().body(member);
