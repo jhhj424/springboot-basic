@@ -24,7 +24,9 @@ class MemberRepositoryTest {
 
     @BeforeEach
     void setUp() {
-        member = new Member("jhhj424@naver.com", "지토");
+        member = Member.builder()
+                .email("jhhj424@naver.com")
+                .name("지토").build();
     }
 
     @Test
