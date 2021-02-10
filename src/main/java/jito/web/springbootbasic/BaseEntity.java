@@ -1,4 +1,4 @@
-package jito.web.springbootbasic.sample.domain;
+package jito.web.springbootbasic;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.LastModifiedBy;

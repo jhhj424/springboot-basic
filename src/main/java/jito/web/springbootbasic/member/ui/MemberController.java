@@ -16,7 +16,7 @@ public class MemberController {
     @ApiOperation(value = "샘플", notes = "테스트용 api")
     @GetMapping("/sample")
     public ResponseEntity<Member> sampleFindMember() {
-        Member member = new Member("테스트 사용자", 10);
+        Member member = new Member("jhhj424@naver.com", "지토");
         return ResponseEntity.ok().body(member);
     }
 }

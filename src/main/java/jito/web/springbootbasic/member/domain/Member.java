@@ -1,38 +1,31 @@
 package jito.web.springbootbasic.member.domain;
 
-import jito.web.springbootbasic.sample.domain.BaseTimeEntity;
+import jito.web.springbootbasic.BaseEntity;
+import lombok.AccessLevel;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-public class Member extends BaseTimeEntity {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+public class Member extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "name")
     private String name;
 
-    @Column(name = "age")
-    private int age;
-
-    protected Member() {
-    }
-
-    public Member(String name, int age) {
+    @Builder
+    public Member(String email, String name) {
+        this.email = email;
         this.name = name;
-        this.age = age;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
     }
 }
+
