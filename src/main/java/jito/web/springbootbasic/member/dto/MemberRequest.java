@@ -1,19 +1,20 @@
 package jito.web.springbootbasic.member.dto;
 
+import jito.web.springbootbasic.member.domain.Member;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class MemberRequest {
-    private String name;
-    private String age;
+    private String email;
+    private String password;
+    private Integer age;
 
-    public MemberRequest(String name, String age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getAge() {
-        return age;
+    public Member toMember() {
+        return new Member(email, password, age);
     }
 }

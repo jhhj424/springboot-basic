@@ -19,13 +19,23 @@ public class Member extends BaseEntity {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "password")
+    private String password;
+
+    @Column(name = "age")
+    private Integer age;
 
     @Builder
-    public Member(String email, String name) {
+    public Member(String email, String password, Integer age) {
         this.email = email;
-        this.name = name;
+        this.password = password;
+        this.age = age;
+    }
+
+    public void update(Member member) {
+        this.email = member.getEmail();
+        this.password = member.getPassword();
+        this.age = member.getAge();
     }
 }
 
