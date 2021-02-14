@@ -1,7 +1,5 @@
-package jito.web.springbootbasic.sample.domain;
+package jito.web.springbootbasic.member.domain;
 
-import jito.web.springbootbasic.member.domain.Member;
-import jito.web.springbootbasic.member.domain.MemberRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,7 +24,7 @@ class MemberRepositoryTest {
     void setUp() {
         member = Member.builder()
                 .email("jhhj424@naver.com")
-                .name("지토").build();
+                .age(26).build();
     }
 
     @Test
@@ -38,7 +36,7 @@ class MemberRepositoryTest {
         // then
         assertThat(savedMember).isEqualTo(member);
         assertThat(savedMember.getId()).isEqualTo(member.getId());
-        assertThat(savedMember.getName()).isEqualTo(member.getName());
+        assertThat(savedMember.getAge()).isEqualTo(member.getAge());
         assertThat(savedMember.getEmail()).isEqualTo(member.getEmail());
     }
 
@@ -54,7 +52,7 @@ class MemberRepositoryTest {
 
         // then
         assertThat(findMember.getId()).isEqualTo(member.getId());
-        assertThat(findMember.getName()).isEqualTo(member.getName());
+        assertThat(findMember.getAge()).isEqualTo(member.getAge());
         assertThat(findMember.getEmail()).isEqualTo(member.getEmail());
     }
 
