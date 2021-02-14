@@ -31,6 +31,10 @@ dependencies {
     // test
     testImplementation 'io.rest-assured:rest-assured:3.3.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // compile
+    compileOnly('org.projectlombok:lombok:1.18.18')
+    annotationProcessor('org.projectlombok:lombok:1.18.18')
 }
 
 test {
