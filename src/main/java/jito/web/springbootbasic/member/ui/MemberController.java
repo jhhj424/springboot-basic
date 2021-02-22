@@ -36,8 +36,8 @@ public class MemberController {
     @PutMapping("/members/{id}")
     public ResponseEntity updateMember(@ApiParam(value = "회원 ID", required = true) @PathVariable Long id,
                                        @ApiParam(value = "변경 할 회원 정보", required = true) @RequestBody MemberRequest request){
-        memberService.updateMember(id, request);
-        return ResponseEntity.ok().build();
+        MemberResponse member = memberService.updateMember(id, request);
+        return ResponseEntity.ok().body(member);
     }
 
     @ApiOperation(value = "회원 삭제", notes = "회원 정보를 삭제한다.")
